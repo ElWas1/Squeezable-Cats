@@ -1,2 +1,2 @@
 # Testing-Web-Page
-A web page where I will practice my programming skills such as HTML, CSS and JavaScript.
+Not sure what I'll do with this one, probably coding some creative website to have fun.
