@@ -1,0 +1,37 @@
+/* Document global styles */
+html {
+    background: rgb(131,58,180);
+    background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 64%, rgba(252,176,69,1) 100%);
+}
+
+* {
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* index.html */
+
+header#header-index {
+    padding: 2rem;
+    min-height: 25vh;
+}
+
+main#main-index {
+    padding: 2rem;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main#main-index > div#squeezable-cat {
+    max-width: max-content;
+}
+
+footer#footer-index {
+    padding: 2rem;
+    min-height: 25vh;
+}

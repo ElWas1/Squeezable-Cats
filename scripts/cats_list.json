@@ -1,0 +1,14 @@
+{
+    "cats": [
+        {
+            "_id": 1,
+            "name": "Siamese cat 1",
+            "image": "./assets/img/siamese_cat_1"
+        },
+        {
+            "_id": 2,
+            "name": "Siamese cat 2",
+            "image": "./assets/img/siamese_cat_2"
+        }
+    ]
+}
