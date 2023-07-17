@@ -1,7 +1,7 @@
 /* Document global styles */
 html {
-    background: rgb(131,58,180);
-    background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 64%, rgba(252,176,69,1) 100%);
+    background: rgb(0, 255, 25);
+    background: linear-gradient(180deg, rgba(0, 255, 25, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 255, 29, 1) 100%);
 }
 
 * {
@@ -17,21 +17,76 @@ html {
 header#header-index {
     padding: 2rem;
     min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+header>h1#title {
+    color: yellow;
+    background-color: rgba(0, 0, 255, 0.398);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    max-width: fit-content;
 }
 
 main#main-index {
     padding: 2rem;
     min-height: 50vh;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
 }
 
-main#main-index > div#squeezable-cat {
+main#main-index>div#squeezable-cat {
     max-width: max-content;
+}
+
+form {
+    outline: .3rem solid rgb(0, 255, 0);
+    border-radius: 1.5rem;
+}
+
+main#main-index>div#animal-select {
+    max-width: fit-content;
+    background-color: black;
+    border-radius: 1.5rem;
+}
+
+select#animal {
+    background-color: yellow;
+    margin: .5rem;
+    border-radius: .5rem;
+    padding: .3rem;
+}
+
+fieldset {
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+label[for='animal'] {
+    color: yellow;
+}
+
+input[type='submit'] {
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: 1rem;
+    transition-duration: .5s;
+    background-color: black;
+    color: yellow;
+    outline: 1px solid gray;
+}
+
+input[type='submit']:hover {
+    background-color: rgb(0, 255, 0);
+    color: black;
 }
 
 footer#footer-index {
     padding: 2rem;
     min-height: 25vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }

@@ -1,14 +1,69 @@
 {
-    "cats": [
+    "animals": [
         {
-            "_id": 1,
+            "id": 1,
             "name": "Siamese cat 1",
             "image": "./assets/img/siamese_cat_1"
         },
         {
-            "_id": 2,
+            "id": 2,
             "name": "Siamese cat 2",
             "image": "./assets/img/siamese_cat_2"
+        },
+        {
+            "id": 3,
+            "name": "Siamese cat 3",
+            "image": "./assets/img/siamese_cat_2"
+        },
+        {
+            "id": 4,
+            "name": "Siamese cat 4",
+            "image": "./assets/img/siamese_cat_2"
+        },
+        {
+            "id": 5,
+            "name": "Siamese cat 5",
+            "image": "./assets/img/siamese_cat_2"
+        },
+        {
+            "id": 6,
+            "name": "Siamese cat 6",
+            "image": "./assets/img/siamese_cat_2"
+        },
+        {
+            "id": 7,
+            "name": "Siamese cat 7",
+            "image": "./assets/img/siamese_cat_2"
+        }
+    ],
+    "surprise": [
+        {
+            "id": 1,
+            "name": "Secret...for now."
+        },
+        {
+            "id": 2,
+            "name": "It's not revealed yet."
+        },
+        {
+            "id": 3,
+            "name": "You won't find anything in here."
+        },
+        {
+            "id": 4,
+            "name": "Nice try."
+        },
+        {
+            "id": 5,
+            "name": "Still hidden..."
+        },
+        {
+            "id": 6,
+            "name": "[CLASSIFIED]"
+        },
+        {
+            "id": 7,
+            "name": "If you really wanna know check the JSON file."
         }
     ]
 }

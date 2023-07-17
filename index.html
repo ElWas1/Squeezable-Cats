@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squeezable cat Website</title>
+    <title>Squeezable animals</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <header id="header-index">
-    <p>Just a header.</p>
+    <h1 id="title">Squeezable animals</h1>
 </header>
 
 <main id="main-index">
-    <p>Just a body.</p>
-    <div id="squeezable-cat">
-        
+    <div id="animal-select">
+        <form action="#">
+            <fieldset>
+                <label for="animal">
+                    Please, select an animal:
+                    <select name="animal" id="animal">
+                        <!-- Options go here by SEO in main.js -->
+                    </select>
+                </label>
+            </fieldset>
+            <input id='new-pic' type="submit" value="Enter">
+        </form>
+        <div id="squeezable-cat">
+        </div>
     </div>
 </main>
 
 <footer id="footer-index">
-    <p>Just a footer.</p>
+    <p>Somehow you found this text.</p>
 </footer>
 
 <script src="./scripts/main.js"></script>
