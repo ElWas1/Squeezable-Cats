@@ -65,5 +65,19 @@
             "id": 7,
             "name": "If you really wanna know check the JSON file."
         }
+    ],
+    "actions": [
+        {
+            "id": 1,
+            "name": "Squeeze"
+        },
+        {
+            "id": 2,
+            "name": "Drag"
+        },
+        {
+            "id": 3,
+            "name": "Stretch"
+        }
     ]
 }

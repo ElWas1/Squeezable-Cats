@@ -12,7 +12,7 @@ html {
     box-sizing: border-box;
 }
 
-/* index.html */
+/* ------------------------------- index.html ----------------------------- */
 
 header#header-index {
     padding: 2rem;
@@ -22,13 +22,24 @@ header#header-index {
     flex-wrap: wrap;
 }
 
+/* --------- Header ---------- */
+
 header>h1#title {
     color: yellow;
     background-color: rgba(0, 0, 255, 0.398);
     padding: 1rem;
     border-radius: 1.5rem;
     max-width: fit-content;
+    transition-duration: .5s;
 }
+
+header>h1#title:hover {
+    background-color: black;
+    color: rgb(0, 255, 25);
+    outline: .2rem solid yellow;
+}
+
+/* --------- Main ---------- */
 
 main#main-index {
     padding: 2rem;
@@ -43,13 +54,25 @@ main#main-index>div#squeezable-cat {
 
 form {
     outline: .3rem solid rgb(0, 255, 0);
-    border-radius: 1.5rem;
+    border-radius: 1rem;
+    background-color: rgba(253, 0, 160, 0.211);
 }
 
 main#main-index>div#animal-select {
     max-width: fit-content;
     background-color: black;
     border-radius: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+fieldset {
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+label[for='animal'] {
+    color: yellow;
 }
 
 select#animal {
@@ -59,23 +82,43 @@ select#animal {
     padding: .3rem;
 }
 
-fieldset {
-    padding: 2rem;
-    border-radius: 1.5rem;
+fieldset#select-2 {
+    display: none;
 }
 
-label[for='animal'] {
-    color: yellow;
+label[for='type'] {
+    color: rgb(0, 255, 0);
+}
+
+select#type {
+    background-color: rgb(0, 255, 0);
+    margin: .5rem;
+    border-radius: .5rem;
+    padding: .3rem;
+}
+
+fieldset#select-3 {
+    display: none;
+}
+
+label[for='action'] {
+    color: cyan;
+}
+
+select#action {
+    background-color: cyan;
+    margin: .5rem;
+    border-radius: .5rem;
+    padding: .3rem;
 }
 
 input[type='submit'] {
-    margin: 1rem;
-    padding: .5rem;
     border-radius: 1rem;
     transition-duration: .5s;
     background-color: black;
     color: yellow;
     outline: 1px solid gray;
+    display: none;
 }
 
 input[type='submit']:hover {
@@ -83,10 +126,22 @@ input[type='submit']:hover {
     color: black;
 }
 
+/* --------- Footer ---------- */
+
 footer#footer-index {
     padding: 2rem;
     min-height: 25vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 651px) {
+    select#animal {
+        width: 50vw;
+    }
+
+    form {
+        width: fit-content;
+    }
 }

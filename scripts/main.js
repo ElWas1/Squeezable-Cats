@@ -1,6 +1,8 @@
 const catPic = document.getElementById('squeezable-cat')
 const dropdownBarCats = document.getElementById('animal')
 const newPic = document.getElementById('new-pic')
+const typeAnimal = document.getElementById('type-animal')
+const actionAnimal = document.getElementById('action-animal')
 
 function showCatNames(array) {
     let pic = '';
@@ -28,3 +30,16 @@ async function init() {
 }
 
 init()
+
+function showNewOption(id) {
+    // Under development
+    newOption = document.getElementById('select-' + id)
+    submitButton = newPic
+    if (newOption.id === 'select-' + id) {
+        newOption.style.display = "block"
+    } else {
+        submitButton.style.display = "block"
+        submitButton.style.margin = "1rem"
+        submitButton.style.padding = ".5rem"
+    }
+}
