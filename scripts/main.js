@@ -1,18 +1,37 @@
 const catPic = document.getElementById('squeezable-cat')
-const dropdownBarCats = document.getElementById('animal')
+const dropdownBarAnimals = document.getElementById('animal')
 const newPic = document.getElementById('new-pic')
-const typeAnimal = document.getElementById('type-animal')
-const actionAnimal = document.getElementById('action-animal')
+const typeAnimal = document.getElementById('type')
+const actionAnimal = document.getElementById('action')
 
-function showCatNames(array) {
-    let pic = '';
+function showAnimals(array) {
+    let pic = `<option value='null'>-- Select --</option>`;
     array.forEach(element => {
-        pic += `<option value='${element.name}'>${element.name}</option>`
+        pic += `<option value='${element.name}' onfocus="showType('${element.name}')">${element.name}</option>`
     });
-    dropdownBarCats.innerHTML = pic
+    dropdownBarAnimals.innerHTML = pic
+    typeAnimal.innerHTML = pic
 }
 
-let catsArray
+function showTypes(array) {
+    let pic = `<option value='null'>-- Select --</option>`;
+    array.forEach(element => {
+        pic += `<option value='${element.name}' onfocus="showType('${element.name}')">${element.name}</option>`
+    });
+    typeAnimal.innerHTML = pic
+}
+
+function showActions(array) {
+    let pic = `<option value='null'>-- Select --</option>`;
+    array.forEach(element => {
+        pic += `<option value='${element.name}' onfocus="showType('${element.name}')">${element.name}</option>`
+    });
+    actionAnimal.innerHTML = pic
+}
+
+let animalsArray
+let typesArray
+let actionsArray
 
 async function obtainData() {
     data = await fetch('scripts/cats_list.json')
@@ -20,22 +39,23 @@ async function obtainData() {
         .then(data => {
             return data
         })
-    catsArray = data.surprise
+    animalsArray = data.animals
+    actionsArray = data.actions
     return data
 }
 
 async function init() {
     await obtainData()
-    showCatNames(catsArray)
+    showAnimals(animalsArray)
+    showActions(actionsArray)
 }
 
 init()
 
 function showNewOption(id) {
-    // Under development
-    newOption = document.getElementById('select-' + id)
     submitButton = newPic
-    if (newOption.id === 'select-' + id) {
+    if (id !== null) {
+        newOption = document.getElementById('select-' + id)
         newOption.style.display = "block"
     } else {
         submitButton.style.display = "block"
